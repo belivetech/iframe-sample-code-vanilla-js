@@ -30,7 +30,7 @@
   <body>
     <div
       id="myAlert"
-      class="alert alert-danger d-none"
+      class="alert alert-danger"
       role="alert"
     >
       We are restricting iframe from using our script. To
@@ -81,19 +81,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script>
-      var myAlert = document.getElementById("myAlert");
-      function isInIframe() {
-        try {
-          return window.self !== window.top;
-        } catch (e) {
-          return true;
-        }
-      }
-      if (isInIframe()) {
-        myAlert.classList.remove("d-none");
-      }
-    </script>
 
     <!-- BeLive Player Widget integration -->
     <script src="belive-player-widget.min.js"></script>
